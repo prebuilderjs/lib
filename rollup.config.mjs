@@ -1,4 +1,4 @@
-import directives from '@preprocess-directives/rollup-plugin';
+import directives from '@prebuilder/rollup-plugin';
 
 export default [
     {

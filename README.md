@@ -1,27 +1,27 @@
-# Preprocess directives library
+# Prebuilder library
 
 <p>
-    <a href="https://www.npmjs.com/package/@preprocess-directives/lib" alt="Npm version">
-        <img src="https://img.shields.io/npm/v/@preprocess-directives/lib">
+    <a href="https://www.npmjs.com/package/@prebuilder/lib" alt="Npm version">
+        <img src="https://img.shields.io/npm/v/@prebuilder/lib">
     </a>
 </p>
 
- C# like preprocessor directives library for javascript
+A preprocessing library that allows to resolve C# like preprocessor directives in any text-based input
 
- NB: 
- - It's recommended to use the cjs version of this library, when using it via NodeJS as it uses the more reliable 'path' tool
- - The esm version needs to be imported from '@preprocess-directives/lib/dist/index.esm.js'
+NB: 
+- It's recommended to use the cjs version of this library, when using it via NodeJS as it uses the more reliable 'path' tool
+- The esm version needs to be imported from '@prebuilder/lib/dist/index.esm.js'
 
 ## Install
 
 ```sh
-npm i @preprocess-directives/lib
+npm i @prebuilder/lib
 ```
 
 ## Usage Examples
 ### 1) Browser:
 ```js
-import preprocess from '@preprocess-directives/lib/dist/index.esm.js';
+import preprocess from '@prebuilder/lib/dist/index.esm.js';
 
 // example of code generated at runtime, for ex with a front-end code editor
 let codeName = 'User generated script';
@@ -46,7 +46,7 @@ code = preprocess(code, {defines: ['MY_DIRECTIVE'], log: false, fileAdress: code
 ### 2) Node:
 ```js
 const fs = require('fs');
-const preprocess = require('@preprocess-directives/lib').default;
+const preprocess = require('@prebuilder/lib').default;
 
 // read source file
 let filePath = 'src/index.js';
