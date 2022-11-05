@@ -23,7 +23,7 @@ const noCodeBefore = (code, end) => {
 
 /**
  * 
- * @param {string} fileAdress Path or Url of the script. ex: "C:\\myDir\\file.js" or "mysite.com/myscript?myparam"
+ * @param {string} fileAdress Path or Url of the script. Ex: "C:\\myDir\\file.js" or "mysite.com/myscript?myparam"
  * @returns {string} Name with extention.
  */
 const getFilename = (fileAdress) => {
@@ -71,16 +71,21 @@ const getFilename = (fileAdress) => {
  * @param {string} code     The code that  must be processed.
  * @param {Object} options  
  * ```txt
- * log: boolean             Wether to show this plugin's logs or not, like skipped files and number
- *                          of #if groups found.
- * fileAdress: string       Path or Url of the script (only REQUIRED when logging).
- *                          ex: "C:\\myDir\\file.js" or "mysite.com/myscript?myparam"
- * mode: string             Wether to process when directives are written plainly or used in a comment
- *                          'commented'     -> directives are written plainly
- *                                  ex: "//#if", "//#else", ... and "//#post-code let exampleVar = 5;"
- *                          'plain'         -> directives are written plainly
- *                                  ex: "#if", "#else", ... ("#post-code" not available)
- *                          'both'(default) -> both techniques at the same time
+ * log: boolean
+ *      Wether to show this plugin's logs or not, like skipped files and number of #if groups found.
+ * 
+ * fileAdress: string
+ *      Path or Url of the script (only REQUIRED when logging).
+ *      Ex: "C:\\myDir\\file.js" or "mysite.com/myscript?myparam"
+ * 
+ * mode: string
+ *      Wether to process when directives are written plainly or used in a comment.
+ *          'commented'     -> directives are written plainly
+ *                              ex: "//#if", "//#else", ...
+ *                                  "//#post-code let exampleVar = 5;"
+ *          'plain'         -> directives are written plainly
+ *                              ex: "#if", "#else", ... ("#post-code" not available)
+ *          'both'(default) -> both techniques at the same time
  * ```
  * @returns {string} Processed code.
  */
